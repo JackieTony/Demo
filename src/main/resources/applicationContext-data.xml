@@ -47,7 +47,7 @@
     </bean>
 
     <!-- 支持 @Transactional 标记 -->
-    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!-- <tx:annotation-driven transaction-manager="transactionManager"/>-->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
 
