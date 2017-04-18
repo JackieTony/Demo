@@ -17,9 +17,7 @@
         http://activemq.apache.org/schema/core
         http://activemq.apache.org/schema/core/activemq-core-5.14.4.xsd">
 
-    <amq:connectionFactory id="amqConnectionFactory"
-                           brokerURL="tcp://localhost:61616"
-                           userName="admin"
+    <amq:connectionFactory id="amqConnectionFactory" brokerURL="tcp://localhost:61616" userName="admin"
                            password="xm3317"/>
 
     <!--

@@ -26,4 +26,5 @@
         <!-- 此变量值为pageContext.request, 页面使用方法：rc.contextPath -->
         <property name="requestContextAttribute" value="rc"/>
     </bean>
+
 </beans>
