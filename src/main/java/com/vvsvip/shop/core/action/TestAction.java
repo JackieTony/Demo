@@ -40,7 +40,7 @@ public class TestAction {
 
     @RequestMapping("/2")
     public String index2() {
-        return "index1";
+        return "redirect:/index1.html";
     }
 
     @RequestMapping("/toJSON")

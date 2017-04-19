@@ -29,7 +29,7 @@
     <mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
     <mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
     <mvc:resources location="/WEB-INF/image/" mapping="/image/**"/>
-
+    <mvc:resources location="/" mapping="/**/*.html"/>
 
     <!-- SpringMVC上传文件时，需要配置MultipartResolver处理器 -->
     <bean id="multipartResolver"
@@ -77,9 +77,6 @@
 
     <!-- 视图配置 在list中按照配置的先后顺序 -->
     <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
-        <!-- <property name="contentNegotiationManager">
-             <bean class="com.vvsvip.core.VvsvipContentNegotiationManager"/>
-         </property>-->
         <property name="viewResolvers">
             <list>
                 <!-- 配置freeMarker视图解析器 -->
@@ -98,24 +95,6 @@
                     <property name="requestContextAttribute" value="request"/>
                     <property name="order" value="0"/>
                 </bean>
-                <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
-                    <property name="viewClass"
-                              value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>
-                    <property name="contentType" value="text/html;charset=UTF-8"/>
-                    <property name="cache" value="false"/>
-                    <property name="prefix" value=""/>
-                    <property name="suffix" value=".html"/>
-                    <property name="order" value="1"/>
-                </bean>
-                <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-                    <property name="viewClass"
-                              value="org.springframework.web.servlet.view.JstlView"/>
-                    <property name="contentType" value="text/html;charset=UTF-8"/>
-                    <property name="cache" value="false"/>
-                    <property name="prefix" value=""/>
-                    <property name="suffix" value=".html"/>
-                    <property name="order" value="2"/>
-                </bean>
                 <!-- jsp视图控制 -->
                 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
                     <property name="viewClass"
@@ -124,7 +103,7 @@
                     <property name="cache" value="false"/>
                     <property name="prefix" value=""/>
                     <property name="suffix" value=".jsp"/>
-                    <property name="order" value="3"/>
+                    <property name="order" value="2"/>
                 </bean>
             </list>
         </property>
