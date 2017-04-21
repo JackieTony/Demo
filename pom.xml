@@ -262,7 +262,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -270,7 +270,5 @@
             <version>2.5</version>
             <scope>provided</scope>
         </dependency>
-
-
     </dependencies>
 </project>
